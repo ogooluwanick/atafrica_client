@@ -5,22 +5,7 @@ import RiskCalculator from '../../components/RiskCalculator/RiskCalculator';
 
 const LandingPage = () => {
         // eslint-disable-next-line no-unused-vars
-        const [scrollPos, setScrollPos] = useState(0);
         const [screen, setScreen] = useState(0)
-
-        useEffect(() => {
-                function handleScroll() {
-                  setScrollPos(window.pageYOffset);
-                }
-                //initialize
-                handleScroll()
-
-                window.addEventListener('scroll', handleScroll);
-            
-                return () => {
-                  window.removeEventListener('scroll', handleScroll);
-                };
-        }, []);
 
         useEffect(() => {
                 const handleResize = () => {
@@ -53,9 +38,8 @@ const LandingPage = () => {
                                 playsInline
                                 loop
                                 preload="auto" 
-                                poster='/imgs/v1_preview.png'
                         >
-                                <source src="/vids/v1.webm" type="video/webm"/>
+                                <source src="/vids/v1_c.webm" type="video/webm"/>
                                 <track kind="captions" src=""/>
                         </video>
                 </motion.div>
